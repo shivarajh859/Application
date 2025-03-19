@@ -1,0 +1,62 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="card p-12 shadow-lg">
+        <h1 class="text-center text-danger">About Malaria Detection Project</h1>
+        <p class="text-center lead">An AI-powered system for detecting malaria in blood cell images using deep learning.</p>
+        
+        <div class="row mt-4 align-items-center">
+            <div class="col-md-12 text-center">
+                <img src="{{ url_for('static', filename='images/about_main.jpeg') }}" class="img-fluid rounded shadow" alt="Malaria Detection">
+            </div>
+            <div class="col-md-12">
+                <h3 class="text-secondary">Project Overview</h3>
+                <p>The Malaria Detection System utilizes <strong>Convolutional Neural Networks (CNNs)</strong> to classify blood cell images as either <em>Parasitized</em> or <em>Uninfected</em>. The goal is to assist in early diagnosis and treatment, reducing malaria-related fatalities.</p>
+                <p><strong>Key technologies used:</strong></p>
+                <ul>
+                    <li>Deep Learning (TensorFlow/Keras)</li>
+                    <li>Flask for Web Deployment</li>
+                    <li>Bootstrap for Responsive UI</li>
+                    <li>Image Processing & Classification</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-5 text-center">
+        <h2 class="">How It Works</h2>
+        <p>Our model processes uploaded microscopic images and predicts the presence of malaria parasites with high accuracy.</p>
+    </div>
+
+    <div class="row mt-4 text-center">
+        <div class="col-md-4">
+            <div class="card shadow-lg">
+                <img src="{{ url_for('static', filename='images/upload.jpg') }}" class="card-img-top" alt="Upload Image">
+                <div class="card-body">
+                    <h5 class="card-title text-secondary">1. Upload an Image</h5>
+                    <p class="card-text">Users can upload blood cell images through our web interface.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-lg">
+                <img src="{{ url_for('static', filename='images/processing.jpg') }}" class="card-img-top" alt="Processing">
+                <div class="card-body">
+                    <h5 class="card-title text-secondary">2. AI Model Analysis</h5>
+                    <p class="card-text">The deep learning model processes the image and classifies it as <em>Parasitized</em> or <em>Uninfected</em>.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-lg">
+                <img src="{{ url_for('static', filename='images/result.jpg') }}" class="card-img-top" alt="Result">
+                <div class="card-body">
+                    <h5 class="card-title text-secondary">3. Get Results</h5>
+                    <p class="card-text">Instant classification results help in early malaria detection.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

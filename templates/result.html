@@ -1,0 +1,18 @@
+{% extends 'index.html' %}
+
+{% block content %}
+    <!-- Result Section -->
+    <div class="container d-flex justify-content-center align-items-center vh-100">
+        <div class="card p-4 shadow-lg">
+            <h1 class="text-center">Prediction Result</h1>
+            <p class="text-center">
+                The uploaded image is classified as:
+                <b style="color: #ff5733;">{{ prediction }}</b>
+            </p>
+            <div class="text-center">
+                <img src="{{ image_path }}" alt="Uploaded Image" class="img-fluid rounded shadow-lg" style="max-width: 300px;">
+            </div>
+            <a href="/" class="btn btn-primary mt-3">Upload Another Image</a>
+        </div>
+    </div>
+{% endblock %}
