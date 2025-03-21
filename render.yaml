@@ -2,8 +2,7 @@ services:
   - type: web
     name: malaria-detection-app
     env: python
-    buildCommand: 
-      - pip install -r requirements.txt
+    buildCommand: pip install -r requirements.txt  # Fix: Removed the extra `-`
     startCommand: gunicorn app:app
     envVars:
       - key: PORT
