@@ -1,6 +1,6 @@
 gunicorn
 flask
-tensorflow
+tensorflow-cpu
 keras
 werkzeug
 pillow
