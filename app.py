@@ -52,6 +52,5 @@ def contact():
     return render_template('contact.html')
 
 if __name__ == '__main__':
-    import os
-    port = int(os.environ.get("PORT", 5000))  # Use the PORT from Render
-    app.run(host='0.0.0.0', port=port, debug=True)
+    port = int(os.environ.get("PORT", 10000))  # Use Render's assigned port
+    app.run(host='0.0.0.0', port=port)
